@@ -7,3 +7,5 @@ CS = ev3.ColorSensor("in1")
 CS.mode = "COL-COLOR"
 
 print("Ok")
+
+#foaiejgoajeogijsoeijgosjeogijsoie
