@@ -8,44 +8,49 @@ MB = ev3.LargeMotor("outB")
 MC = ev3.LargeMotor("outC")
 MD = ev3.LargeMotor("outD")
 
+CalcPos = [0,0]
 
-def forward(int speed=500,int time=1):
+def forward(speed = 500,time = 1):
+    print('Moving forwards for',time,'at speed',speed)
     MA.RUN_TIMED(speed.sp=speed)
     MB.RUN_TIMED(speed.sp=speed)
     MC.RUN_TIMED(speed.sp=speed)
     MD.RUN_TIMED(speed.sp=speed)
-def backwards(int speed=500,int time=1):
+    CalcPos[0] += 1
+def backwards(speed = 500,time = 1):
+    print('Moving backwards for',time,'at speed',speed)
     MA.RUN_TIMED(speed.sp=-speed)
     MB.RUN_TIMED(speed.sp=-speed)
     MC.RUN_TIMED(speed.sp=-speed)
     MD.RUN_TIMED(speed.sp=-speed)
-
-def left(int speed=500,int time=1):
+    CalcPos[0] -= 1
+def left(speed = 500,time = 1):
+    print('Moving left for',time,'at speed',speed)
     MA.RUN_TIMED(speed.sp=speed)
     MB.RUN_TIMED(speed.sp=speed)
     MC.RUN_TIMED(speed.sp=-speed)
     MD.RUN_TIMED(speed.sp=-speed)
-
-def right(int speed=500,int time=1):
+    CalcPos[1] -= 1
+def right(speed = 500,time = 1):
     print('Moving right for',time,'at speed',speed)
     MA.RUN_TIMED(speed.sp=-speed)
     MB.RUN_TIMED(speed.sp=-speed)
     MC.RUN_TIMED(speed.sp=speed)
     MD.RUN_TIMED(speed.sp=speed)
-
-def diag_forward_left(int speed=500,int time=1):
+    CalcPos[1] += 1
+def diag_forward_left(speed = 500,time = 1):
     forward(time=0.5)
     left(time=0.5)
 
-def diag_forward_right(int speed=500,int time=1):
+def diag_forward_right(speed = 500,time = 1):
     forward(time=0.5)
     right(time=0.5)
 
-def diag_backward_left(int speed=500,int time=1):
+def diag_backward_left(speed = 500,time = 1):
     backwards(time=0.5)
     left(time=0.5)
 
-def diag_backward_right(int speed=500,int time=1):
+def diag_backward_right(speed = 500,time = 1):
     backwards(time=0.5)
     right(time=0.5)
 

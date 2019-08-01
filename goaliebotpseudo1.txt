@@ -1,0 +1,19 @@
+while(true):
+	if IR = 1:                    #Situation 1 = ball on left
+    	if colour = black:
+		move backwards 5cm:	
+	    else:
+	        move left 1cm: 
+	    until IR = 5:             #IR is the direction of the ball, 5 is center 
+	if IR = 2:	                  #Situation 2 = ball in front
+	    if colour = black:
+	        move back 5 cm:
+	    else:
+	        move forward 1 cm:
+	    check IR
+	if IR = 3:        	          #Situation 3 = ball on right
+	    if colour = black:
+		move backwards 5cm:
+	    else:
+		move right 1cm:
+	    until IR = 5:

@@ -5,3 +5,8 @@ import sys
 
 IR = ev3.Sensor("in2", driver_name = "ht-nxt-ir-seek-v2") 
 IR.mode = "AC-ALL"
+IROut = IR.Value()
+IRVal = IR.Strength()
+
+if 1 <= IROut <= 4:
+    
