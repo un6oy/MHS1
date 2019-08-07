@@ -8,7 +8,7 @@ CS = ev3.ColorSensor("in1")
 CS.mode = "COL-COLOR"
 def CheckColourNew():
 
-    CSOut = CS.value()
+    CSOut = CS.value()   #do we need anything in the brackets? as in CS.value(0)
 
     print(CSOut)
     if CSOut == 1:
@@ -24,4 +24,4 @@ def CheckColourNew():
 while True:
     colour = CheckColourNew()
     print(colour)
-    time.sleep(1)
+    time.sleep(1) #one second...? this pauses everything for one second

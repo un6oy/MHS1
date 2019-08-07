@@ -8,7 +8,7 @@ USR.mode = "US-DIST-CM"
 USF = ev3.Sensor("in3", driver_name = "lego-ev3-us")
 USF.mode = "US-DIST-CM"
 
-# TODO: redo a, b with centreLine and offseFromCentre in the code
+#TO DO: redo a, b with centreLine and offseFromCentre in the code
 a = 1
 b = 2
 centreLine = 2

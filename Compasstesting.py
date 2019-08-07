@@ -6,4 +6,4 @@ import sys
 Compass = ev3.Sensor("in3", driver_name = "ht-nxt-compass")
 Compass.mode = "COMPASS"
 
-#225 is south
+#225 is south              rly? 

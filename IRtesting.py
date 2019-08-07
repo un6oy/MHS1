@@ -9,4 +9,6 @@ IROut = IR.Value()
 IRVal = IR.Strength()
 
 if 1 <= IROut <= 4:
-    
+    pass
+
+#better start working on dis lol or not idk

@@ -9,7 +9,7 @@ MC = ev3.LargeMotor("outC")
 MD = ev3.LargeMotor("outD")
 
 CalcPos = [0,0]
-
+         #work on this because its just gonna not go forwards and instead it will turn. 
 def forward(speed = 500,time = 1):
     print('Moving forwards for',time,'at speed',speed)
     MA.RUN_TIMED(speed.sp=speed)

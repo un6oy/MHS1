@@ -2,9 +2,9 @@
 import ev3dev.ev3 as ev3
 import time
 import sys
-import motortesting.py as motors
-import CStesting.py as colour
-import UStesting.py as US
+import motortesting as motors
+import CStesting as colour
+import UStesting as US
 button = ev3.Button()
 IR = ev3.Sensor("in2", driver_name = "ht-nxt-ir-seek-v2") 
 IR.mode = "AC-ALL"
@@ -57,4 +57,4 @@ def TrackBall():
         print("IR Error")
 
 while True:
-    ballLocation = TrackBall()
+    TrackBall()
