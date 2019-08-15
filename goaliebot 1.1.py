@@ -33,33 +33,33 @@ def TrackBall():
     # Ball is left
     IROut = IR.value(0)
     IRVal = IR.value(3)
-    if IROut(0) < 4:
+    if 0 < IROut(0) < 4:
         motors.left()                             #move left 1cm
         if colour.CheckColourNew() == 1:          #check colour
             motors.backwards(500,2)
         elif colour.CheckColourNew() == 3:
             break    
-    elif IROut(0) == 5:
+    elif 4 < IROut(0) < 6:
         motors.forward()                          #move forward 1cm
         motors.backwards()                        #move backwards 1cm
         if colour.CheckColourNew() == 1:          #check colour
             motors.backwards(500,2)
-        elif colour.CheckColourNew() = 3:
+        elif colour.CheckColourNew() == 3:
             break    
-    elif IROut(0) > 6:
+    elif 9 >= IROut(0) > 6:
         motors.right()                            #move right 1cm
         if colour.CheckColourNew() == 1:          #check colour
             motors.backwards(500,2)
         elif colour.CheckColourNew() == 3:
             break       
     elif IROut(0) == 0:
-        if US.USFCheck = 3:
+        if US.USFCheck == 3:
             motors.left()
             motors.right(500,2)
             motors.left()
-        elif US.USFCheck = 1:
+        elif US.USFCheck == 1:
             motors.left()
-        elif US.USFCheck = 2:
+        elif US.USFCheck == 2:
             motors.right()
     else:
         print("IR Error")

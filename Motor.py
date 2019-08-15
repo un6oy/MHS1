@@ -12,31 +12,35 @@ CalcPos = [0,0]
 
 def forward(speed = 500,time = 1):
     print('Moving forwards for',time,'at speed',speed)
-    MA.RUN_FOREVER(speed.sp=speed)
-    MB.RUN_FOREVER(speed.sp=-speed)
-    MC.RUN_FOREVER(speed.sp=speed)
-    MD.RUN_FOREVER(speed.sp=-speed)
+    MA.run_timed(time_sp = time * 1000, speed_sp=speed) 
+    MB.run_timed(time_sp = time * 1000, speed_sp=speed) 
+    MC.run_timed(time_sp = time * 1000, speed_sp=speed) 
+    MD.run_timed(time_sp = time * 1000, speed_sp=speed) 
+    time.sleep(time) 
     CalcPos[0] += 1
 def backwards(speed = 500,time = 1):
     print('Moving backwards for',time,'at speed',speed)
-    MA.RUN_FOREVER(speed.sp=-speed)
-    MB.RUN_FOREVER(speed.sp=speed)
-    MC.RUN_FOREVER(speed.sp=-speed)
-    MD.RUN_FOREVER(speed.sp=speed)
+    MA.run_timed(time_sp = time * 1000, speed_sp=-speed) 
+    MB.run_timed(time_sp = time * 1000, speed_sp=-speed) 
+    MC.run_timed(time_sp = time * 1000, speed_sp=-speed) 
+    MD.run_timed(time_sp = time * 1000, speed_sp=-speed) 
+    time.sleep(time) 
     CalcPos[0] -= 1
 def left(speed = 500,time = 1):
     print('Moving left for',time,'at speed',speed)
-    MA.RUN_FOREVER(speed.sp=-speed)
-    MB.RUN_FOREVER(speed.sp=-speed)
-    MC.RUN_FOREVER(speed.sp=-speed)
-    MD.RUN_FOREVER(speed.sp=-speed)
+    MA.run_timed(time_sp = time * 1000, speed_sp=speed) 
+    MB.run_timed(time_sp = time * 1000, speed_sp=speed) 
+    MC.run_timed(time_sp = time * 1000, speed_sp=-speed) 
+    MD.run_timed(time_sp = time * 1000, speed_sp=-speed) 
+    time.sleep(time) 
     CalcPos[1] -= 1
 def right(speed = 500,time = 1):
     print('Moving right for',time,'at speed',speed)
-    MA.RUN_FOREVER(speed.sp=-speed)
-    MB.RUN_FOREVER(speed.sp=-speed)
-    MC.RUN_FOREVER(speed.sp=-speed)
-    MD.RUN_FOREVER(speed.sp=-speed)
+    MA.run_timed(time_sp = time * 1000, speed_sp=-speed) 
+    MB.run_timed(time_sp = time * 1000, speed_sp=-speed) 
+    MC.run_timed(time_sp = time * 1000, speed_sp=speed) 
+    MD.run_timed(time_sp = time * 1000, speed_sp=speed) 
+    time.sleep(time) 
     CalcPos[1] += 1
 def diag_forward_left(speed = 500,time = 1):
     forward(time=0.5)
