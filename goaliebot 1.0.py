@@ -1,4 +1,4 @@
-# #!/usr/bin/env python3
+#!/usr/bin/env python3
 import ev3dev.ev3 as ev3
 import time
 import sys
@@ -25,7 +25,7 @@ IR, Compass, 2xUS
 
 def TrackBall():
     # Ball is left
-    if IROut(0) < 4:
+    if 0 < IROut(0) <= 4:
         motors.left()                             #move left 1cm
         if colour.CheckColourNew() == 1:          #check colour
             motors.backwards(500,2)
@@ -36,16 +36,16 @@ def TrackBall():
         motors.backwards()                        #move backwards 1cm
         if colour.CheckColourNew() == 1:          #check colour
             motors.backwards(500,2)
-        elif colour.CheckColourNew() = 3:
+        elif colour.CheckColourNew() == 3:
             break    
-    elif IROut(0) > 6:
+    elif IROut(0) >= 6:
         motors.right()                            #move right 1cm
         if colour.CheckColourNew() == 1:          #check colour
             motors.backwards(500,2)
         elif colour.CheckColourNew() == 3:
             break       
     elif IROut(0) == 0:
-        if US.USFCheck = 3:
+        if US.USFCheck == 3:
             motors.left()
             motors.right(500,2)
             motors.left()
