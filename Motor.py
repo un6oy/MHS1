@@ -67,6 +67,7 @@ def diag_backward_right(speed = 500,time = 1):
 
 def correction_spin():
     compass = Compass.value(0)
+    compass = 0
     if 180 < compass < 360:
         while compass < 350:
             MA.run_timed(speed_sp=300, time_sp=0.1)
@@ -74,6 +75,7 @@ def correction_spin():
             MC.run_timed(speed_sp=300, time_sp=0.1)
             MD.run_timed(speed_sp=300, time_sp=0.1)
             compass = Compass.value(0)
+            time.sleep(0.1)
     else:
         while compass > 10:
             MA.run_timed(speed_sp=-300, time_sp=0.1)
@@ -81,6 +83,7 @@ def correction_spin():
             MC.run_timed(speed_sp=-300, time_sp=0.1)
             MD.run_timed(speed_sp=-300, time_sp=0.1)
             compass = Compass.value(0)
+            time.sleep(0.1)
     
 while True:
     forward(time=2)
