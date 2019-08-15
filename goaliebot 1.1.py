@@ -2,7 +2,7 @@
 import ev3dev.ev3 as ev3
 import time
 import sys
-import motortesting.py as motors
+import Motor.py as motors
 import CStesting.py as colour
 import UStesting.py as US
 button = ev3.Button()
@@ -29,6 +29,7 @@ def refresh()
     IROut = IR.value(0)
     IRVal = IR.value(3)
     CSOut = CS.value(0)
+    
 def TrackBall():
     # Ball is left
     IROut = IR.value(0)
@@ -68,7 +69,7 @@ def TrackBall():
 #MAIN
 
 
-def StartButton():
+def StartButton(state):
     print('Press button to start...')
     while True:
         if button.enter == True:
@@ -78,3 +79,4 @@ def StartButton():
 
 while True:
     ballLocation = TrackBall()
+    
